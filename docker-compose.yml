@@ -1,0 +1,13 @@
+version: '2'
+services:
+  pyconjp:
+    build:
+      context: ./pycon.jp.2018
+      args: 
+        # Set GitHub branch name to deploy.
+        # Default: master
+        - GIT_BRANCH=dev
+    ports:
+      # Set listen port.
+      # If you want to open port 8000, then set to "8000:3000".
+      - "3000:3000"
